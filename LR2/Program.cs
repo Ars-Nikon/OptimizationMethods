@@ -11,19 +11,12 @@ namespace LR2
             // return Math.Pow((25 - Math.Pow(x, 2)), 0.5);
             //  return Math.Pow(Math.Pow((Math.Pow(x,2)-1),2),1/3);
             // return Math.Pow(x, 4) + Math.Exp(-x);
-            return - 2 * Math.Pow(x, 2) + 2 * x + 2;
+            return  2 * Math.Pow(x, 2) + 2 * x + 2;
         }
         static double DerFunct(double x)
         {
             return -(x / Math.Sqrt(25 - Math.Pow(x, 2)));
         }
-        static int Fibonachi(int n)
-        {
-            if (n == 0 || n == 1) return n;
-
-            return Fibonachi(n - 1) + Fibonachi(n - 2);
-        }
-
         static void Main(string[] args)
         {
             Methods.UniformSearch(-6, 6, 1, Funct);
